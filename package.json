@@ -83,6 +83,7 @@
     "clean-webpack-plugin": "^3.0.0"
   },
   "dependencies": {
+    "antd": "^4.8.2",
     "highcharts": "^8.1.2",
     "moment": "^2.27.0",
     "react": "^16.13.0",

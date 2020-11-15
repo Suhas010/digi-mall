@@ -22,3 +22,13 @@ export const memoize = (func) => {
     return cache[key];
   };
 };
+
+export const getProductDetails = (products, id) => {
+  if (products[id]) return products[id];
+  return false;
+};
+
+export const getFormatedNumber = (number) => new Intl.NumberFormat('en-IN').format(number);
+export const getCurrencyFormater = (price) => new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR' }).format(price);
+export const getRatings = () => Math.random() * 5 + 1;
+export const getVots = () => getFormatedNumber(parseInt(getRatings() * 50000, 10));
