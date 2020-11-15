@@ -30,6 +30,7 @@
   .actions {
     display: flex;
     flex-direction: column;
+    
   }
   img {
     height: 250px;
@@ -68,5 +69,22 @@
     .value {
       font-size: 16px;
     }
+  }
+}
+.add-to-cart {
+  display: flex;
+  justify-content: center;
+  .ant-input-number {
+    background-color: white;
+    color: #020101;
+    width: 50px;
+    padding: 5px;
+  }
+  .anticon {
+    border: solid 1px gray;
+    border-radius: 17px;
+    text-align: center;
+    padding: 8px;
+    margin: 5px;
   }
 }

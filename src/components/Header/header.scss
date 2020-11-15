@@ -11,9 +11,14 @@
   .theam-icon {
     height: 30px;
     position: absolute;
-    right: 25px;
+    right: 100px;
     top: 15px;
     cursor: pointer;
+  }
+  .ant-badge {
+    position: absolute;
+    right: 40px;
+    top: 16px;
   }
 }
 @media only screen and (max-width: 700px) {

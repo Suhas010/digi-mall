@@ -2,6 +2,7 @@ import { Rate } from 'antd';
 import React from 'react';
 import { useParams, withRouter } from 'react-router-dom';
 import { Img } from '../../common';
+import AddToCart from '../../common/AddToCart';
 import PRODUCTS from '../../utils/constants';
 import { getProductDetails, getRatings, getVots } from '../../utils/helper';
 import { PDESC } from '../../utils/strings';
@@ -44,8 +45,10 @@ const ProductDetails = (props) => {
             {getDesc()}
           </ul>
           <hr />
-          <button type="button">BUY</button>
-          <button type="button" o>Add to Cart</button>
+          <div className="action">
+            <button type="button">BUY</button>
+            <AddToCart id={id} />
+          </div>
         </div>
       </div>
     </div>

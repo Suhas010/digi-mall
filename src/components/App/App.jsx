@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { ThemeProvider } from '../../context/TheamContext';
+import { ThemeProvider, CountProvider } from '../../context';
 import Header from '../Header';
 import Footer from '../Footer';
 import 'antd/dist/antd.css';
@@ -14,9 +14,11 @@ export const App = () => (
         path="/"
         component={() => (
           <ThemeProvider>
-            <Header />
-            <Master />
-            <Footer />
+            <CountProvider>
+              <Header />
+              <Master />
+              <Footer />
+            </CountProvider>
           </ThemeProvider>
         )}
       />

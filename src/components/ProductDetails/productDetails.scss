@@ -6,7 +6,10 @@
  .container {
   display: flex;
   flex-wrap: wrap;
-  
+  .action {
+    display: flex;
+    height: 43px;
+  }
   .image {
     width: 35%;
     text-align: center;
