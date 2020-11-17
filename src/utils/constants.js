@@ -1,3 +1,5 @@
+import React from 'react';
+
 import apple from '../assets/apple.jpg';
 import banana from '../assets/banana.jpg';
 import kivi from '../assets/kivi.jpg';
@@ -8,6 +10,8 @@ import pear from '../assets/pear.jpg';
 import blackberry from '../assets/blackberry.jpg';
 import blackcurrent from '../assets/blackcurrant.jpg';
 import cranberry from '../assets/cranberry.jpg';
+import AddToCart from '../common/AddToCart';
+// import
 
 export const PRODUCTS = {
   apple: {
@@ -122,6 +126,7 @@ export const COLUMNS = [
     title: 'Units',
     dataIndex: 'count',
     key: 'units',
+    render: (p, { key })=> key ? <AddToCart id={key} /> : ''
   },
   {
     title: 'Total',

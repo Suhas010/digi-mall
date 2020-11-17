@@ -1,15 +1,15 @@
 import { Button, Empty, Table } from 'antd';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Notification } from '../../common/Notification';
 import { useCarttState, useCartDispatch } from '../../context';
 import { COLUMNS } from '../../utils/constants';
-import { getCurrencyFormater, getFormatedNumber } from '../../utils/helper';
+import { getCurrencyFormater } from '../../utils/helper';
 import './cartDetails.scss';
 
 const CartDetails = () => {
   const state = useCarttState();
   const dispatch = useCartDispatch();
-  console.log(state);
   const getCart = () => {
     let items = [];
     if (state && Object.keys(state).length) {
@@ -48,7 +48,6 @@ const CartDetails = () => {
         },
       );
       items.push({
-        key: 'random-key',
         title: 'Total',
         count: grandCount,
         amount: getCurrencyFormater(grandPrice),
@@ -69,11 +68,14 @@ const CartDetails = () => {
     );
   }
 
-  const clearCart = () => {
-    dispatch({type: 'clearCart'});
-    // history.push()
-  }
-
+  const clearCart = (showPopup, total) => {
+    if (showPopup) {
+      Notification('success', 'Success', <>Order id <b>#12355352</b>  worth <b>{total}</b> is placed successfully. Thanks for shopping with us.</>);
+    } else {
+      Notification('warning', 'Attention', 'You just cleared your cart.');
+    }
+    dispatch({ type: 'clearCart' });
+  };
   return (
     <div className="cart-details">
       <Table
@@ -93,8 +95,8 @@ const CartDetails = () => {
         bordered
       />
       <div className="buy">
-        <Button type="ghost" onClick={clearCart}>Clear cart</Button>
-        <Link to="/?order-placed">Place order</Link>
+        <Button type="ghost" onClick={() => clearCart(false)}>Clear cart</Button>
+        <Button type="primary" onClick={() => clearCart(true, dataSource[dataSource.length - 1].total)}>Place order</Button>
       </div>
       <div />
     </div>
