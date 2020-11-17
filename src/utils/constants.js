@@ -2,14 +2,14 @@ import apple from '../assets/apple.jpg';
 import banana from '../assets/banana.jpg';
 import kivi from '../assets/kivi.jpg';
 import orange from '../assets/orange.jpg';
-import honeydew from '../assets/honeydew.jpeg';
-import roseapple from '../assets/roseapple.png';
+import honeydew from '../assets/honeydew.jpg';
+import roseapple from '../assets/roseapple.jpg';
 import pear from '../assets/pear.jpg';
 import blackberry from '../assets/blackberry.jpg';
-import blackcurrent from '../assets/Blackcurrant.jpg';
+import blackcurrent from '../assets/blackcurrant.jpg';
 import cranberry from '../assets/cranberry.jpg';
 
-const PRODUCTS = {
+export const PRODUCTS = {
   apple: {
     title: 'Apple',
     desc: 'Sunt id fugiat tempor dolor ullamco culpa enim do quis officia esse ipsum ad. Dolore cupidatat veniam laboris commodo. Ea tempor velit duis duis id quis. Anim et occaecat id excepteur labore consectetur. Commodo veniam aute non laboris officia aliquip sint deserunt deserunt occaecat nostrud. Consequat Lorem sit nisi exercitation occaecat. Excepteur eiusmod reprehenderit excepteur aliquip et laborum do nulla veniam Lorem Lorem.',
@@ -102,4 +102,30 @@ const PRODUCTS = {
   },
 };
 
-export default PRODUCTS;
+export const COLUMNS = [
+  {
+    title: 'No',
+    dataIndex: 'index',
+    key: 'no',
+  },
+  {
+    title: 'Name',
+    dataIndex: 'title',
+    key: 'title',
+  },
+  {
+    title: 'Price',
+    dataIndex: 'amount',
+    key: 'amount',
+  },
+  {
+    title: 'Units',
+    dataIndex: 'count',
+    key: 'units',
+  },
+  {
+    title: 'Total',
+    dataIndex: 'total',
+    key: 'units',
+  },
+];

@@ -1,5 +1,5 @@
 import { ThemeContext, ThemeProvider } from './TheamContext';
-import { CountProvider, useCountDispatch, useCountState } from './CartContext';
+import { CarttProvider, useCartDispatch, useCarttState } from './CartContext';
 
 export { ThemeContext, ThemeProvider };
-export { CountProvider, useCountState, useCountDispatch };
+export { CarttProvider, useCarttState, useCartDispatch };

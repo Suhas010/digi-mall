@@ -13,7 +13,7 @@ const LIGHT = [
   '--table-row: #dddddd',
 ];
 const DARK = [
-  '--app-background: black',
+  '--app-background: #022448',
   '--text-color: white',
   '--slider-color: #f5e9e975',
   '--section-border: pink',

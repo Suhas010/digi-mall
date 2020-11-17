@@ -1,11 +1,8 @@
 import React from 'react';
 import MainPageComponent from './MainPageComponent';
-import products from '../../utils/constants';
+import { PRODUCTS } from '../../utils/constants';
 import './main.scss';
-const MainPage = () => {
-    return (
-        <MainPageComponent products={products} />
-    );
-};
+
+const MainPage = () => <MainPageComponent products={PRODUCTS} />;
 
 export default MainPage;

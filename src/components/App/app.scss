@@ -10,6 +10,10 @@ body {
   background-color: var(--app-background);
   color: var(--text-color);
 }
+.cart-button {
+  font-size: 30px;
+  color: var(--text-color);
+}
 * {
   box-sizing: border-box;
   font-family: 'Baloo Tamma 2', cursive;

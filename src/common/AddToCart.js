@@ -1,12 +1,12 @@
 import React from 'react';
 import { InputNumber } from 'antd';
 import { MinusOutlined, PlusOutlined } from '@ant-design/icons';
-import { useCountDispatch, useCountState } from '../context';
+import { useCartDispatch, useCarttState } from '../context';
 
 const AddToCart = ({ id })=> {
-  const dispatch = useCountDispatch();
+  const dispatch = useCartDispatch();
 
-  const state = useCountState();
+  const state = useCarttState();
   const handleCartAction = (action) => {
     dispatch({ type: action, key: id });
   };

@@ -12,7 +12,7 @@ const ProductDetails = (props) => {
   const { id } = useParams();
   const { history } = props;
   console.log(props, '$$$');
-  const product = getProductDetails(PRODUCTS, id);
+  const product = getProductDetails(id);
   console.log();
 
   if (!id || !product) history.push('/');

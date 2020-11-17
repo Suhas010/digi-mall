@@ -1,3 +1,4 @@
+import { PRODUCTS } from "./constants";
 
 export const debounce = function (func, delay) {
   let timer;
@@ -23,8 +24,8 @@ export const memoize = (func) => {
   };
 };
 
-export const getProductDetails = (products, id) => {
-  if (products[id]) return products[id];
+export const getProductDetails = (id) => {
+  if (PRODUCTS[id]) return PRODUCTS[id];
   return false;
 };
 
