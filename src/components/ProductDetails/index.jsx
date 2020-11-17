@@ -1,21 +1,16 @@
 import { Rate } from 'antd';
 import React from 'react';
 import { useParams, withRouter } from 'react-router-dom';
-import { Img } from '../../common';
-import AddToCart from '../../common/AddToCart';
-import PRODUCTS from '../../utils/constants';
+import { Img, AddToCart, Buy } from '../../common';
 import { getProductDetails, getRatings, getVots } from '../../utils/helper';
 import { PDESC } from '../../utils/strings';
 import './productDetails.scss';
 
-const ProductDetails = (props) => {
+const ProductDetails = ({ history: { push } }) => {
   const { id } = useParams();
-  const { history } = props;
-  console.log(props, '$$$');
   const product = getProductDetails(id);
-  console.log();
 
-  if (!id || !product) history.push('/');
+  if (!id || !product) push('/');
   const {
     title, desc, price, img,
   } = product;
@@ -46,7 +41,7 @@ const ProductDetails = (props) => {
           </ul>
           <hr />
           <div className="action">
-            <button type="button">BUY</button>
+            <Buy id={id} />
             <AddToCart id={id} />
           </div>
         </div>

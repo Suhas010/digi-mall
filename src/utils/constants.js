@@ -126,7 +126,7 @@ export const COLUMNS = [
     title: 'Units',
     dataIndex: 'count',
     key: 'units',
-    render: (p, { key })=> key ? <AddToCart id={key} /> : ''
+    render: (p, { key, unit })=> key ? <AddToCart id={key} /> : <b>{unit}</b>
   },
   {
     title: 'Total',

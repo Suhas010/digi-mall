@@ -49,7 +49,7 @@ const CartDetails = () => {
       );
       items.push({
         title: 'Total',
-        count: grandCount,
+        unit: grandCount,
         amount: getCurrencyFormater(grandPrice),
         total: getCurrencyFormater(grandTotal),
       });
