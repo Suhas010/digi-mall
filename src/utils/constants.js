@@ -11,7 +11,6 @@ import blackberry from '../assets/blackberry.jpg';
 import blackcurrent from '../assets/blackcurrant.jpg';
 import cranberry from '../assets/cranberry.jpg';
 import AddToCart from '../common/AddToCart';
-// import
 
 export const PRODUCTS = {
   apple: {

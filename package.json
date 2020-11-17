@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Hiring assignment for Pro-Mobi",
   "author": "Suhas More",
-  "main": "src/public/index.html",
+  "main": "public/index.html",
+  "homepage": "/",
   "keywords": [
     "pro-mobi",
     "suhas010"

@@ -3,3 +3,4 @@ node_modules
 .idea
 dist
 src/assets/.DO_NOT_DELETE
+coverage/*
