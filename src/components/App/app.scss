@@ -18,6 +18,14 @@ body {
   box-sizing: border-box;
   font-family: 'Baloo Tamma 2', cursive;
 }
+.ant-spin {
+  justify-content: center;
+  display: flex;
+  margin: 10%;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
 
 button {
   background-color: aquamarine;

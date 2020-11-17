@@ -55,6 +55,7 @@
     "react-test-renderer": "^16.13.0",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.11.2",
+    "axios": "^0.19.2",
     "enzyme-to-json": "^3.4.4",
     "stylelint": "^13.2.0",
     "stylelint-config-recommended": "^3.0.0",
