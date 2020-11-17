@@ -10,53 +10,48 @@ const MainPage = () => {
     data: [],
     loading: false,
   });
-  const getProducts = (callback) => {
-    setTimeout(() => {
-      callback(PRODUCTS);
-    }, 3000);
-  };
+
   useEffect(() => {
     setState({
       ...state,
       loading: true,
     });
-    getProducts((products) => {
+
+    // DUMMY API CALL
+    Client.getProducts((products) => {
       setState({
         ...state,
         data: products,
         loading: false,
       });
     });
-    const getData = async () => {
-      const data = await Client.GET('/products');
-      console.log(data);
-      // setState({
-      //   ...state,
-      //   data: data.data,
-      //   loading: false,
-      // });
-    };
-    getData();
+
+    // TO Fetch Data from local json server
+    // const getData = async () => {
+    //   const data = await Client.GET('/products');
+    //   console.log(data);
+    //   // setState({
+    //   //   ...state,
+    //   //   data: data.data,
+    //   //   loading: false,
+    //   // });
+    // };
+    // getData();
   }, []);
+  const { loading, data } = state;
   return (
     <>
-      {state.loading && (
+      {loading && (
         <>
           <Spin size="large" tip="Loading products..." />
           <Row>
-            <Col sm={6} md={6} lg={6}>
-              <Skeleton loading={state.loading} />
-            </Col>
-            <Col sm={6} md={6} lg={6}>
-              <Skeleton loading={state.loading} />
-            </Col>
-            <Col sm={6} md={6} lg={6}>
-              <Skeleton loading={state.loading} />
+            <Col sm={24} md={24} lg={24}>
+              <Skeleton loading={loading} />
             </Col>
           </Row>
         </>
       )}
-      <MainPageComponent products={state.data} />
+      {!loading && <MainPageComponent products={data} /> }
     </>
   );
 };
