@@ -1,16 +1,5 @@
 import React from 'react';
-
-import apple from '../assets/apple.jpg';
-import banana from '../assets/banana.jpg';
-import kivi from '../assets/kivi.jpg';
-import orange from '../assets/orange.jpg';
-import honeydew from '../assets/honeydew.jpg';
-import roseapple from '../assets/roseapple.jpg';
-import pear from '../assets/pear.jpg';
-import blackberry from '../assets/blackberry.jpg';
-import blackcurrent from '../assets/blackcurrant.jpg';
-import cranberry from '../assets/cranberry.jpg';
-import AddToCart from '../common/AddToCart';
+import AddToCart from '../common/';
 
 export const PRODUCTS = {
   apple: {
