@@ -27,7 +27,7 @@ const MainPage = () => {
       });
     });
 
-    // TO Fetch Data from local json server
+    // TO Fetch Data from local json server Used in development
     // const getData = async () => {
     //   const data = await Client.GET('/products');
     //   console.log(data);

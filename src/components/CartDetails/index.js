@@ -58,12 +58,20 @@ const CartDetails = () => {
       });
       return items;
     }
+    return false;
   };
 
   // Handle clear cart actions
   const clearCart = (showPopup, total) => {
     if (showPopup) {
-      Notification('success', 'Success', <>Order id <b>#12355352</b>  worth <b>{total}</b> is placed successfully. Thanks for shopping with us.</>);
+      Notification('success', 'Success',
+        <>
+          Order id
+          <b>#12355352</b>
+          worth
+          <b>{total}</b>
+          is placed successfully. Thanks for shopping with us.
+        </>);
     } else {
       Notification('warning', 'Attention', 'You just cleared your cart.');
     }

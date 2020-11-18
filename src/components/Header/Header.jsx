@@ -9,7 +9,6 @@ import { Img } from '../../common';
 import './header.scss';
 import STRING from '../../utils/strings';
 
-// import SUN from '';
 const Header = ({ history: { push } }) => {
   const { dark, toggle } = useContext(ThemeContext);
   const state = useCartState();

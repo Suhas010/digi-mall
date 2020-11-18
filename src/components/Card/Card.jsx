@@ -5,7 +5,7 @@ import { Img, AddToCart, Buy } from '../../common';
 import './Card.scss';
 
 const Card = ({
-  title, img, desc, id, price: { amount, unit }, history,
+  title, img, desc, id, price: { amount, unit },
 }) => (
   <div className="card-container">
     <div className="price">

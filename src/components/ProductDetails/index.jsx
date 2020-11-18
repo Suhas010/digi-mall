@@ -21,7 +21,7 @@ const ProductDetails = ({ history: { push } }) => {
   useEffect(() => {
     setState({
       ...state,
-      loading: true
+      loading: true,
     });
 
     // DUMMY API CALL
@@ -29,17 +29,20 @@ const ProductDetails = ({ history: { push } }) => {
       setState({
         ...state,
         data: products,
-        loading: false
+        loading: false,
       });
     });
   }, []);
 
   // DUMMY description of profuct
   const getDesc = () => PDESC.map(item => <li>{item}</li>);
+
   const {
     loading,
-    data: { title, img, desc }
+    data: { title, img, desc },
   } = state;
+
+
   return (
     <div className="product-details">
       {loading && (
