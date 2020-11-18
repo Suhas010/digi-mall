@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Skeleton, Spin, Row, Col } from 'antd';
+import {
+  Skeleton, Spin, Row, Col,
+} from 'antd';
 import MainPageComponent from './MainPageComponent';
-import { PRODUCTS } from '../../utils/constants';
 import Client from '../../service/DummyClient';
 import './main.scss';
 

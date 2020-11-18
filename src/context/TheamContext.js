@@ -8,18 +8,13 @@ const ThemeContext = React.createContext({
 const LIGHT = [
   '--app-background: white',
   '--text-color: black',
-  '--slider-color: #00000075',
-  '--section-border: red',
   '--table-row: #dddddd',
 ];
 const DARK = [
   '--app-background: #022448',
   '--text-color: white',
-  '--slider-color: #f5e9e975',
-  '--section-border: pink',
   '--table-row: #454328',
 ];
-
 
 export function ThemeProvider({ children }) {
   const [dark, setDark] = useState(false);

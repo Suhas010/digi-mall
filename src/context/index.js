@@ -1,5 +1,5 @@
 import { ThemeContext, ThemeProvider } from './TheamContext';
-import { CarttProvider, useCartDispatch, useCarttState } from './CartContext';
+import { CartProvider, useCartDispatch, useCartState } from './CartContext';
 
 export { ThemeContext, ThemeProvider };
-export { CarttProvider, useCarttState, useCartDispatch };
+export { CartProvider, useCartState, useCartDispatch };

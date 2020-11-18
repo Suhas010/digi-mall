@@ -1,10 +1,10 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import { useCartDispatch, useCarttState} from '../context';
+import { useCartDispatch, useCartState} from '../context';
 
 const Buy = ({id, history }) => {
   const dispatch = useCartDispatch();
-  const state = useCarttState();
+  const state = useCartState();
   const handleBuy = () => {
     // if 10 items already added in cart => Just proceed to cart details page
     if (state[id] && state[id].count === 10) {

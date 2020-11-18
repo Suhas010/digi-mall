@@ -1,14 +1,14 @@
 import React from 'react';
 import { InputNumber } from 'antd';
 import { MinusOutlined, PlusOutlined } from '@ant-design/icons';
-import { useCartDispatch, useCarttState } from '../context';
+import { useCartDispatch, useCartState } from '../context';
 import { Notification } from './Notification';
 
 // Handles add to cart action, resued everywher in app
 const AddToCart = ({ id }) => {
   const dispatch = useCartDispatch();
 
-  const state = useCarttState();
+  const state = useCartState();
   let count = 0;
   if (state && state[id]) {
     count = state[id].count;

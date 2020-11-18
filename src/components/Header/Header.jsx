@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import { Badge } from 'antd';
 import { ShoppingCartOutlined } from '@ant-design/icons';
-import { ThemeContext, useCarttState } from '../../context';
+import { ThemeContext, useCartState } from '../../context';
 import moon from '../../assets/moon.svg';
 import sun from '../../assets/sun.svg';
 import { Img } from '../../common';
@@ -12,7 +12,7 @@ import STRING from '../../utils/strings';
 // import SUN from '';
 const Header = ({ history: { push } }) => {
   const { dark, toggle } = useContext(ThemeContext);
-  const state = useCarttState();
+  const state = useCartState();
 
   // count no of product added in Cart
   const count = Object.keys(state).reduce(

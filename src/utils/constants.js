@@ -1,5 +1,5 @@
 import React from 'react';
-import AddToCart from '../common/';
+import { AddToCart } from '../common';
 
 export const PRODUCTS = {
   apple: {

@@ -1,15 +1,18 @@
-import { Button, Empty, Table } from 'antd';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Notification } from '../../common/Notification';
-import { useCarttState, useCartDispatch } from '../../context';
+import { Button, Empty, Table } from 'antd';
+import { Notification } from '../../common';
 import { COLUMNS } from '../../utils/constants';
 import { getCurrencyFormater } from '../../utils/helper';
+import { useCartState, useCartDispatch } from '../../context';
+
 import './cartDetails.scss';
 
 const CartDetails = () => {
-  const state = useCarttState();
+  const state = useCartState();
   const dispatch = useCartDispatch();
+
+  // prepare data source for table from cart items
   const getCart = () => {
     let items = [];
     if (state && Object.keys(state).length) {
@@ -56,7 +59,20 @@ const CartDetails = () => {
       return items;
     }
   };
+
+  // Handle clear cart actions
+  const clearCart = (showPopup, total) => {
+    if (showPopup) {
+      Notification('success', 'Success', <>Order id <b>#12355352</b>  worth <b>{total}</b> is placed successfully. Thanks for shopping with us.</>);
+    } else {
+      Notification('warning', 'Attention', 'You just cleared your cart.');
+    }
+    dispatch({ type: 'clearCart' });
+  };
+
   const dataSource = getCart();
+
+  // if cart is empty
   if (!dataSource || !dataSource.length) {
     return (
       <div className="empty-cart">
@@ -68,14 +84,6 @@ const CartDetails = () => {
     );
   }
 
-  const clearCart = (showPopup, total) => {
-    if (showPopup) {
-      Notification('success', 'Success', <>Order id <b>#12355352</b>  worth <b>{total}</b> is placed successfully. Thanks for shopping with us.</>);
-    } else {
-      Notification('warning', 'Attention', 'You just cleared your cart.');
-    }
-    dispatch({ type: 'clearCart' });
-  };
   return (
     <div className="cart-details">
       <Table
